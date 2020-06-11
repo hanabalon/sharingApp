@@ -38,7 +38,7 @@ public class ContactList {
         Integer index = 0;
 
         for (Contact i: contacts) {
-            if (i.getId() == contact.getId()) {
+            if (i.getId().equals(contact.getId())) {
                 return index;
             }
             index++;
@@ -48,7 +48,7 @@ public class ContactList {
 
     public boolean hasContact (Contact contact) {
         for (Contact i: contacts) {
-            if (i.getId() == contact.getId()) {
+            if (i.getId().equals(contact.getId())) {
                 return true;
             }
         }
@@ -57,7 +57,7 @@ public class ContactList {
 
     public Contact getContactByUsername(String username) {
         for (Contact i: contacts) {
-            if (i.getUsername() == username) {
+            if (i.getUsername().equals(username)) {
                 return i;
             }
         }
@@ -98,7 +98,7 @@ public class ContactList {
         Boolean is_exists = false;
 
         for (Contact i: contacts) {
-            if (i.getUsername() == username) {
+            if (i.getUsername().equals(username)) {
                 is_exists = true;
             }
         }
